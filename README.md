@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+React Component Library (Test Assignment)
+A small React UI component library built with TypeScript and Storybook as part of a front-end test assessment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
 
-Currently, two official plugins are available:
+- React
+- TypeScript
+- Storybook
+- Framer Motion
+- CSS Modules
+- Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation
+npm install
+npm run storybook
 
-## React Compiler
+Storybook will be available at http://localhost:6006
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+omponents Overview
 
-## Expanding the ESLint configuration
+1. Input Component
+   Reusable input component supporting multiple types and features:
+   text / number / password
+   password visibility toggle
+   clearable input
+   States
+   Default
+   Password (hidden / visible)
+   Clearable
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Screenshots:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Input default](./screenshots/input-default.png)
+![Input password visible](./screenshots/input-password-visible.png)
+![Input password hidden](./screenshots/input-password-hidden.png)
+![Input number](./screenshots/input-number.png)
+![Input clearable](./screenshots/input-clearable.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. Toast Component
+   Notification component with animations and auto-dismiss behavior.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Features
+Appears in bottom-right corner
+Auto close with configurable duration
+Manual close option
+Animated transitions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Screenshots:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![Toast success](./screenshots/toast-success.png)
+![Toast error](./screenshots/toast-error.png)
+![Toast info](./screenshots/toast-info.png)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Sidebar Menu Component
+   Sliding sidebar menu with nested accordion navigation.
+
+Features
+Slides in from the right
+Overlay click to close
+Nested menu (accordion)
+Supports multiple nesting levels
+
+Screenshots:
+
+![Sidebar nested](./screenshots/sidebar-nested.png)
